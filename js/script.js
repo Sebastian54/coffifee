@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Fetch JSON data
     fetch('data.json')
         .then(response => response.json())
         .then(data => {
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error loading JSON:', error));
 
-    // TASK 4: Build 3x3 Gallery
+    // 3x3 Gallery with fade-in animation
     function buildGallery(items) {
         const gallery = document.getElementById('json-gallery');
         if (!gallery) return; 
@@ -31,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery.innerHTML += cardHTML;
         });
 
-        // Re-attach heart icon listeners for dynamic content
         document.querySelectorAll('.heart-icon').forEach(heart => {
             heart.addEventListener('click', function(e) {
                 e.preventDefault(); 
@@ -42,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // TASKS 5 & 6: Build Interactive Carousel with Auto-play
+    // Interactive Carousel with auto-play
     function buildCarousel(items) {
         const track = document.getElementById('carousel-track');
         if (!track) return; 
@@ -79,14 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCarousel();
         });
 
-        // Task 6: Auto-play functionality
+        // Auto-play functionality
         setInterval(() => {
             currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
             updateCarousel();
         }, 5000); 
     }
-
-    // Intersection Observer for fade-in animations on scroll
+    // Observer for fade-in animations when scrolling
     const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {

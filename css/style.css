@@ -1,4 +1,3 @@
-/* CSS Variables for Theme */
 :root {
     --bg-color: #efebdf;
     --brand-color: #4d1f19;
@@ -7,7 +6,6 @@
     --transition: all 0.3s ease;
 }
 
-/* Reset & Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -35,10 +33,9 @@ ul {
 }
 
 main {
-    flex: 1; /* Pushes footer to bottom */
+    flex: 1;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
@@ -73,7 +70,6 @@ nav {
     color: #ccc;
 }
 
-/* Hero Section (Index only) */
 .hero {
     height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
@@ -82,7 +78,7 @@ nav {
     justify-content: center;
     padding: 0 5%;
     color: var(--text-light);
-    margin-top: -80px; /* Pull up under nav */
+    margin-top: -80px;
     padding-top: 80px;
 }
 
@@ -123,7 +119,6 @@ nav {
     color: var(--text-light);
 }
 
-/* Sections General */
 section {
     padding: 5rem 5%;
 }
@@ -135,7 +130,6 @@ section {
     font-weight: 600;
 }
 
-/* Product Cards */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -255,7 +249,6 @@ section {
 #prevBtn { left: 10px; }
 #nextBtn { right: 10px; }
 
-/* About Us Section */
 .about-container {
     background-color: var(--brand-color);
     border-radius: 12px;
@@ -292,7 +285,6 @@ section {
     align-items: center;
 }
 
-/* Specialties Section */
 .specialty-card {
     background-color: var(--brand-color);
     border-radius: 12px;
@@ -324,7 +316,6 @@ section {
     flex: 1;
 }
 
-/* Footer */
 footer {
     background-color: var(--brand-color);
     color: var(--text-light);
@@ -340,7 +331,6 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-/* Animations */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -352,7 +342,6 @@ footer {
     transform: translateY(0);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
     .nav-links { flex-direction: column; text-align: center; gap: 1rem;}
