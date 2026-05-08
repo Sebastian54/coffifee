@@ -1,0 +1,362 @@
+/* CSS Variables for Theme */
+:root {
+    --bg-color: #efebdf;
+    --brand-color: #4d1f19;
+    --text-dark: #111;
+    --text-light: #fff;
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+main {
+    flex: 1; /* Pushes footer to bottom */
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--brand-color);
+    color: var(--text-light);
+    width: 100%;
+    z-index: 100;
+}
+
+.nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-links a {
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: #ccc;
+}
+
+/* Hero Section (Index only) */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    color: var(--text-light);
+    margin-top: -80px; /* Pull up under nav */
+    padding-top: 80px;
+}
+
+.hero-subtitle {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.btn-dark {
+    background-color: var(--brand-color);
+    color: var(--text-light);
+}
+
+/* Sections General */
+section {
+    padding: 5rem 5%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Product Cards */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: transparent;
+    transition: var(--transition);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.heart-icon:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.card-footer .btn-dark {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    z-index: 10;
+    padding: 1rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+/* About Us Section */
+.about-container {
+    background-color: var(--brand-color);
+    border-radius: 12px;
+    padding: 3rem;
+    color: var(--text-light);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-info {
+    flex: 1;
+    background-color: #d1cbc1;
+    color: var(--text-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.about-map {
+    flex: 1;
+    height: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.contact-bar {
+    background-color: #d1cbc1;
+    margin-top: 1.5rem;
+    padding: 1.5rem 3rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Specialties Section */
+.specialty-card {
+    background-color: var(--brand-color);
+    border-radius: 12px;
+    display: flex;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+.specialty-card.reverse {
+    flex-direction: row-reverse;
+}
+
+.specialty-img-container {
+    flex: 1;
+    position: relative;
+}
+
+.specialty-img-container img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.specialty-content {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background-color: var(--brand-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 5%;
+    margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { flex-direction: column; text-align: center; gap: 1rem;}
+    nav { flex-direction: column; gap: 1rem; }
+    .about-container, .specialty-card, .specialty-card.reverse { flex-direction: column; }
+    .contact-bar { flex-direction: column; gap: 1rem; text-align: center; }
+}

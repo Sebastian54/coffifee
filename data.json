@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "src": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=600&q=80",
+        "title": "Lungo coffee",
+        "description": "Rich and bold espresso pulled long for a deeper flavor profile.",
+        "price": "Rs. 200"
+    },
+    {
+        "id": 2,
+        "src": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
+        "title": "Classic Cappuccino",
+        "description": "Perfectly frothed milk over smooth, locally roasted espresso.",
+        "price": "Rs. 220"
+    },
+    {
+        "id": 3,
+        "src": "https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&w=600&q=80",
+        "title": "Iced Americano",
+        "description": "Chilled espresso poured over ice and filtered water.",
+        "price": "Rs. 180"
+    },
+    {
+        "id": 4,
+        "src": "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80",
+        "title": "Mocha Latte",
+        "description": "Espresso mixed with premium cocoa and steamed milk.",
+        "price": "Rs. 250"
+    },
+    {
+        "id": 5,
+        "src": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80",
+        "title": "Caramel Macchiato",
+        "description": "Vanilla syrup, steamed milk, espresso, and a rich caramel drizzle.",
+        "price": "Rs. 240"
+    },
+    {
+        "id": 6,
+        "src": "https://images.unsplash.com/photo-1497515114629-f71d768fd07c?auto=format&fit=crop&w=600&q=80",
+        "title": "Flat White",
+        "description": "Velvety micro-foamed milk poured over a double shot of espresso.",
+        "price": "Rs. 210"
+    },
+    {
+        "id": 7,
+        "src": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&q=80",
+        "title": "Espresso Shot",
+        "description": "A pure, concentrated shot of our signature house blend.",
+        "price": "Rs. 150"
+    },
+    {
+        "id": 8,
+        "src": "https://images.unsplash.com/photo-1485808191679-5f86510681a2?auto=format&fit=crop&w=600&q=80",
+        "title": "Matcha Latte",
+        "description": "Finely ground green tea leaves lightly sweetened with steamed milk.",
+        "price": "Rs. 260"
+    },
+    {
+        "id": 9,
+        "src": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&q=80",
+        "title": "Cold Brew",
+        "description": "Slow-steeped for 18 hours for a smooth, acid-free finish.",
+        "price": "Rs. 200"
+    }
+]
